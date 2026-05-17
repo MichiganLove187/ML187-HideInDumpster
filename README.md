@@ -1,5 +1,7 @@
 # ML187 Hide in Dumpster
 
+UPDATED 5/16/26
+ MORE SCRIPTS INCOMING !
 A script that allows players to hide inside trash cans and dumpsters. Police officers can search trash cans to find hidden players.
 
 ## Features
