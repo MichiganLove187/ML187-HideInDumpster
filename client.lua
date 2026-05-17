@@ -1,4 +1,3 @@
--- Framework initialization
 local Framework = nil
 if Config.Framework == "qbcore" then
     Framework = exports['qb-core']:GetCoreObject()
@@ -35,7 +34,7 @@ function Main:Init()
                     type = 'client',
                     icon = "fa-solid fa-search",
                     label = "Search Trash Can",
-                    job = "police", -- Restrict the option to police job
+                    job = "police",
                 },
             },
             distance = Config.TrashCans.Distance,
@@ -65,7 +64,7 @@ function Main:Init()
                 onSelect = function()
                     TriggerEvent('ml187:hideindumpster:search')
                 end,
-                groups = {['police'] = 0} -- Restrict to police job in ox_target format
+                groups = {['police'] = 0}
             }
         })
     end
@@ -122,7 +121,7 @@ function Main:Notify(msg)
     elseif Config.Framework == "qbox" then
         Framework.Functions.Notify(msg)
     else
-        -- Fallback to native notification if framework notification isn't available
+    
         local Notif = {
             text = msg,
             color = 130,
